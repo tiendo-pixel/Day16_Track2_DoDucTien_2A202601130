@@ -1,12 +1,12 @@
 {
-    "data_load_time_sec": 0.561,
-    "training_time_sec": 1.894,
+    "data_load_time_sec": 1.6827,
+    "training_time_sec": 1.3077,
     "best_iteration": 100,
-    "auc_roc": 0.6306,
-    "accuracy": 0.9934,
-    "f1_score": 0.0553,
-    "precision": 0.5,
-    "recall": 0.0293,
-    "inference_latency_single_ms": 1.8022,
-    "inference_throughput_1000_qps": 313686.64
+    "auc_roc": 0.8577,
+    "accuracy": 0.9986,
+    "f1_score": 0.6273,
+    "precision": 0.5656,
+    "recall": 0.7041,
+    "inference_latency_single_ms": 4.6031,
+    "inference_throughput_1000_qps": 151064.43
 }
