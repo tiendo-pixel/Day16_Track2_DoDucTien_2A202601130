@@ -1,13 +1,13 @@
 ================================================================================
 LAB 16: CLOUD AI ENVIRONMENT SETUP - REALTIME SYSTEM RESOURCE REPORT
 Student / Author: Do Duc Tien
-Environment: Cloud AI Compute Node (Linux Ubuntu 22.04 LTS via Google Colab / SSH)
-Execution Timestamp: 2026-08-15
+Environment: Cloud AI Compute Node (Linux / Google Colab T4 GPU)
+Execution Timestamp: 2026-08-16
 ================================================================================
 
 1. HARDWARE ACCELERATOR (GPU SPECIFICATIONS & UTILIZATION)
 --------------------------------------------------------------------------------
-Sat Aug 15 04:02:53 2026
+Sun Aug 16 10:19:49 2026       
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |
 +-----------------------------------------+------------------------+----------------------+
@@ -16,9 +16,9 @@ Sat Aug 15 04:02:53 2026
 |                                         |                        |               MIG M. |
 |=========================================+========================+======================|
 |   0  Tesla T4                       Off |   00000000:00:04.0 Off |                    0 |
-| N/A   55C    P8             15W /   70W |       0MiB /  15360MiB |      0%      Default |
+| N/A   46C    P8             13W /   70W |       0MiB /  15360MiB |      0%      Default |
 |                                         |                        |                  N/A |
-+-----------------------------------------+------------------------+----------------------+
++-----------------------------------------------------------------------------------------+
 
 +-----------------------------------------------------------------------------------------+
 | Processes:                                                                              |
@@ -31,38 +31,20 @@ Sat Aug 15 04:02:53 2026
 2. SYSTEM MEMORY & SWAP USAGE (RAM)
 --------------------------------------------------------------------------------
                total        used        free      shared  buff/cache   available
-Mem:            50Gi       939Mi        44Gi       2.0Mi       5.1Gi        49Gi
+Mem:            50Gi       853Mi        45Gi       2.0Mi       5.1Gi        49Gi
 Swap:             0B          0B          0B
 
-3. CPU & SYSTEM KERNEL INFO
---------------------------------------------------------------------------------
-Architecture:                            x86_64
-CPU op-mode(s):                          32-bit, 64-bit
-Address sizes:                           46 bits physical, 48 bits virtual
-Byte Order:                              Little Endian
-CPU(s):                                  8
-On-line CPU(s) list:                     0-7
-Vendor ID:                               GenuineIntel
-Model name:                              Intel(R) Xeon(R) CPU @ 2.00GHz
-CPU family:                              6
-Model:                                   85
-Thread(s) per core:                      2
-Core(s) per socket:                      4
-Socket(s):                               1
-Stepping:                                3
-BogoMIPS:                                4000.26
-
-4. SUMMARY OF LIGHTGBM BENCHMARK PERFORMANCE (LAB 16 METRICS)
+3. SUMMARY OF LIGHTGBM BENCHMARK PERFORMANCE (REAL KAGGLE DATASET)
 --------------------------------------------------------------------------------
 - Dataset: Credit Card Fraud Detection (284,807 samples x 30 features)
-- Data Load Time:                0.5610 sec
-- Model Training Time:           1.8940 sec
+- Data Load Time:                1.6827 sec
+- Model Training Time:           1.3077 sec
 - Best Iteration:                100
-- AUC-ROC Metric:                0.6306
-- Classification Accuracy:       99.34% (0.9934)
-- F1-Score:                      0.0553
-- Precision:                     0.5000
-- Recall:                        0.0293
-- Single-Row Inference Latency:  1.8022 ms
-- Batch Inference Throughput:    313,686.64 queries/sec (1000 rows batch)
+- AUC-ROC Metric:                0.8577
+- Classification Accuracy:       99.86% (0.9986)
+- F1-Score:                      0.6273
+- Precision:                     0.5656
+- Recall:                        0.7041
+- Single-Row Inference Latency:  4.6031 ms
+- Batch Inference Throughput:    151,064.43 queries/sec (1000 rows batch)
 ================================================================================
